@@ -1,103 +1,121 @@
 /* ===== RESET ===== */
 * {
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove espaçamentos padrão */
-  box-sizing: border-box; /* Inclui bordas no tamanho total */
-  font-family: Arial, sans-serif; /* Fonte simples */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== FUNDO DA PÁGINA ===== */
+/* ===== FUNDO GERAL ===== */
 body {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Azul clarinho degradê */
-  color: #333; /* Texto escuro */
-  line-height: 1.6; /* Espaço entre linhas */
-  padding: 20px; /* Espaço nas bordas da tela */
+  background: #e9eff6; /* Azul bem clarinho */
+  color: #333;
+  line-height: 1.6;
+  padding: 0; /* Sem padding, vamos usar nas seções */
 }
 
-/* ===== CONTAINER CENTRAL ===== */
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 1000px; /* Largura máxima */
+  max-width: 1200px; /* Mais largo para ocupar melhor */
   margin: auto; /* Centraliza */
-  background: #fff; /* Fundo branco */
-  padding: 30px; /* Espaço interno */
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra */
+  padding: 40px; /* Espaço nas laterais */
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-  text-align: center; /* Centralizado */
-  margin-bottom: 20px; /* Espaço embaixo */
+  text-align: center;
+  padding: 25px;
+  background: #2a4797; /* Azul escuro */
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 header h1 {
-  color: #2a4797; /* Azul escuro */
   margin-bottom: 10px;
 }
 
 nav ul {
-  list-style: none; /* Sem bolinhas */
-  display: flex; /* Itens lado a lado */
-  justify-content: center; /* Centraliza */
-  gap: 20px; /* Espaço entre links */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
-  text-decoration: none; /* Remove sublinhado */
-  color: #2a4797; /* Azul escuro */
-  font-weight: bold; /* Negrito */
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: #1565c0; /* Azul mais forte */
+  text-decoration: underline;
 }
 
 /* ===== SEÇÕES ===== */
 .secao {
-  margin: 30px 0; /* Espaço entre seções */
-  padding: 20px; /* Espaço interno */
+  margin: 40px 0; /* Espaço entre seções */
+  padding: 40px 60px; /* Espaço interno maior (laterais largas) */
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* ===== CADA SEÇÃO COM COR DE FUNDO DIFERENTE ===== */
+.secao-curso {
+  background: #fef9c3; /* Amarelo claro */
+}
+
+.secao-ia {
+  background: #dbeafe; /* Azul claro */
+}
+
+.secao-setec {
+  background: #dcfce7; /* Verde claro */
+}
+
+/* ===== TÍTULOS ===== */
 .secao h2 {
-  text-align: center; /* Centralizado */
-  margin-bottom: 15px;
-  color: #1565c0; /* Azul médio */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a4797;
 }
 
 /* ===== IMAGENS ===== */
 .imagem {
-  display: block; /* Ocupa linha toda */
-  max-width: 100%; /* Nunca passa da tela */
-  margin: 20px auto; /* Centraliza */
-  border-radius: 10px; /* Bordas arredondadas */
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* ===== VÍDEOS (miniaturas lado a lado) ===== */
+/* ===== VÍDEOS ===== */
 .categoria-videos {
-  display: flex; /* Lado a lado */
-  justify-content: center; /* Centraliza */
-  flex-wrap: wrap; /* Quebra no celular */
-  gap: 15px; /* Espaço entre eles */
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .categoria-videos img {
-  width: 220px; /* Tamanho fixo */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra */
-  transition: transform 0.3s; /* Animação */
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
 .categoria-videos img:hover {
-  transform: scale(1.05); /* Zoom suave */
+  transform: scale(1.05);
 }
 
 /* ===== RODAPÉ ===== */
 footer {
-  text-align: center; /* Centralizado */
-  padding: 15px;
-  margin-top: 30px;
-  border-top: 2px solid #ccc; /* Linha separando */
-  font-size: 0.9rem; /* Texto menor */
-  color: #555;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #fff;
+  background: #2a4797;
+  border-radius: 10px;
 }
