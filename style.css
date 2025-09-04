@@ -1,120 +1,103 @@
-/* ===== RESET BÁSICO ===== */
+/* ===== RESET ===== */
 * {
   margin: 0; /* Remove margens padrão */
   padding: 0; /* Remove espaçamentos padrão */
-  box-sizing: border-box; /* Inclui borda no cálculo de tamanho */
-  font-family: Arial, sans-serif; /* Fonte padrão do site */
+  box-sizing: border-box; /* Inclui bordas no tamanho total */
+  font-family: Arial, sans-serif; /* Fonte simples */
 }
 
-/* ===== BODY ===== */
+/* ===== FUNDO DA PÁGINA ===== */
 body {
-  line-height: 1.6; /* Espaçamento entre linhas do texto */
-  background-color: #f3f4f6; /* Cor de fundo geral (cinza claro) */
-  color: #333; /* Cor do texto */
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Azul clarinho degradê */
+  color: #333; /* Texto escuro */
+  line-height: 1.6; /* Espaço entre linhas */
+  padding: 20px; /* Espaço nas bordas da tela */
+}
+
+/* ===== CONTAINER CENTRAL ===== */
+.container {
+  max-width: 1000px; /* Largura máxima */
+  margin: auto; /* Centraliza */
+  background: #fff; /* Fundo branco */
+  padding: 30px; /* Espaço interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra */
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-  background: #2a4797; /* Fundo azul escuro */
-  color: #fff; /* Texto branco */
-  padding: 20px 0; /* Espaço interno (cima e baixo) */
-  text-align: center; /* Centraliza texto */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra embaixo */
+  text-align: center; /* Centralizado */
+  margin-bottom: 20px; /* Espaço embaixo */
 }
 
 header h1 {
-  margin-bottom: 10px; /* Espaço abaixo do título */
+  color: #2a4797; /* Azul escuro */
+  margin-bottom: 10px;
 }
 
-/* ===== MENU ===== */
 nav ul {
-  list-style: none; /* Remove bolinhas da lista */
-  display: flex; /* Coloca os itens lado a lado */
-  justify-content: center; /* Centraliza no meio */
-  gap: 25px; /* Espaço entre os itens */
-  flex-wrap: wrap; /* Quebra para baixo se a tela for pequena */
+  list-style: none; /* Sem bolinhas */
+  display: flex; /* Itens lado a lado */
+  justify-content: center; /* Centraliza */
+  gap: 20px; /* Espaço entre links */
 }
 
 nav a {
-  color: #fff; /* Cor branca dos links */
-  text-decoration: none; /* Remove o sublinhado */
-  font-weight: bold; /* Deixa em negrito */
+  text-decoration: none; /* Remove sublinhado */
+  color: #2a4797; /* Azul escuro */
+  font-weight: bold; /* Negrito */
 }
 
 nav a:hover {
-  text-decoration: underline; /* Aparece sublinhado ao passar o mouse */
-}
-
-/* ===== CONTEÚDO PRINCIPAL ===== */
-main {
-  width: 100%; /* Ocupa toda a largura da tela */
-  padding: 30px; /* Espaçamento interno */
+  color: #1565c0; /* Azul mais forte */
 }
 
 /* ===== SEÇÕES ===== */
 .secao {
-  padding: 40px 30px; /* Espaçamento interno */
-  margin: 25px auto; /* Espaço externo em cima e embaixo */
-  border-radius: 16px; /* Bordas arredondadas */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra suave */
+  margin: 30px 0; /* Espaço entre seções */
+  padding: 20px; /* Espaço interno */
 }
 
-/* Cores diferentes para separar as seções */
-.secao-curso {
-  background: #5a73e2; /* Amarelo claro */
-}
-
-.secao-ia {
-  background: #3f8bee; /* Azul claro */
-}
-
-.secao-setec {
-  background: #84ccfcd2; /* Verde claro */
-}
-
-/* Títulos das seções */
 .secao h2 {
-  margin-bottom: 20px; /* Espaço abaixo do título */
-  font-size: 2rem; /* Tamanho grande */
-  color: #1e3a8a; /* Azul escuro */
   text-align: center; /* Centralizado */
-}
-
-article {
-  margin-bottom: 20px; /* Espaço entre os textos de cada tema */
+  margin-bottom: 15px;
+  color: #1565c0; /* Azul médio */
 }
 
 /* ===== IMAGENS ===== */
 .imagem {
-  display: block; /* Faz a imagem ficar sozinha em uma linha */
-  max-width: 90%; /* Não deixa passar da tela */
-  margin: 20px auto; /* Centraliza e dá espaço em cima e embaixo */
-  border-radius: 14px; /* Bordas arredondadas */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25); /* Sombra */
+  display: block; /* Ocupa linha toda */
+  max-width: 100%; /* Nunca passa da tela */
+  margin: 20px auto; /* Centraliza */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
-/* ===== VÍDEOS LADO A LADO ===== */
-.videos-container {
-  display: flex; /* Coloca os vídeos lado a lado */
-  justify-content: center; /* Centraliza os vídeos */
-  flex-wrap: wrap; /* Se não couber, quebra para baixo */
-  gap: 20px; /* Espaço entre os vídeos */
-  margin-top: 20px; /* Espaço acima dos vídeos */
+/* ===== VÍDEOS (miniaturas lado a lado) ===== */
+.categoria-videos {
+  display: flex; /* Lado a lado */
+  justify-content: center; /* Centraliza */
+  flex-wrap: wrap; /* Quebra no celular */
+  gap: 15px; /* Espaço entre eles */
+  margin-top: 15px;
 }
 
-.videos-container iframe {
-  flex: 1; /* Faz os vídeos ocuparem espaço igual */
-  min-width: 250px; /* Largura mínima para não ficarem muito pequenos */
-  height: 300px; /* Altura maior para PC */
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
+.categoria-videos img {
+  width: 220px; /* Tamanho fixo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra */
+  transition: transform 0.3s; /* Animação */
+}
+
+.categoria-videos img:hover {
+  transform: scale(1.05); /* Zoom suave */
 }
 
 /* ===== RODAPÉ ===== */
 footer {
-  text-align: center; /* Texto centralizado */
-  padding: 15px; /* Espaçamento interno */
-  background: #000000; /* Azul escuro */
-  color: #fff; /* Texto branco */
-  margin-top: 30px; /* Espaço acima do rodapé */
+  text-align: center; /* Centralizado */
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 2px solid #ccc; /* Linha separando */
+  font-size: 0.9rem; /* Texto menor */
+  color: #555;
 }
