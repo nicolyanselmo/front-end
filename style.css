@@ -15,7 +15,7 @@ body {
 
 /* ===== CABEÇALHO ===== */
 header {
-  background: #1e3a8a; /* Fundo azul escuro */
+  background: #2a4797; /* Fundo azul escuro */
   color: #fff; /* Texto branco */
   padding: 20px 0; /* Espaço interno (cima e baixo) */
   text-align: center; /* Centraliza texto */
@@ -61,15 +61,15 @@ main {
 
 /* Cores diferentes para separar as seções */
 .secao-curso {
-  background: #fef9c3; /* Amarelo claro */
+  background: #032ff5; /* Amarelo claro */
 }
 
 .secao-ia {
-  background: #dbeafe; /* Azul claro */
+  background: #3f8bee; /* Azul claro */
 }
 
 .secao-setec {
-  background: #dcfce7; /* Verde claro */
+  background: #84ccfcd2; /* Verde claro */
 }
 
 /* Títulos das seções */
@@ -114,7 +114,7 @@ article {
 footer {
   text-align: center; /* Texto centralizado */
   padding: 15px; /* Espaçamento interno */
-  background: #1e3a8a; /* Azul escuro */
+  background: #000000; /* Azul escuro */
   color: #fff; /* Texto branco */
   margin-top: 30px; /* Espaço acima do rodapé */
 }
