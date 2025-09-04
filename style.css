@@ -1,89 +1,111 @@
-/* =================== RESET BÁSICO =================== */
-/* Remove margens e paddings padrões e define uma fonte */
+/* ===== RESET BÁSICO ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  box-sizing: border-box; /* Inclui bordas no cálculo de tamanho */
+  font-family: Arial, sans-serif; /* Fonte padrão */
 }
 
-/* =================== ESTILOS DO BODY =================== */
+/* ===== ESTILO DO BODY ===== */
 body {
-  line-height: 1.6; /* Altura da linha (melhora leitura) */
-  background-color: #f4f4f9; /* Cor de fundo geral */
-  color: #333; /* Cor padrão do texto */
+  line-height: 1.6; /* Altura entre linhas */
+  background-color: #e5e7eb; /* Cinza claro */
+  color: #333; /* Cor do texto */
 }
 
-/* =================== CABEÇALHO =================== */
+/* ===== CABEÇALHO ===== */
 header {
   background: #1e3a8a; /* Azul escuro */
   color: #fff; /* Texto branco */
-  padding: 20px 0; /* Espaçamento interno */
-  text-align: center; /* Centraliza o conteúdo */
+  padding: 20px 0; /* Espaçamento */
+  text-align: center; /* Centralizado */
 }
 
 header h1 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaço abaixo do título */
 }
 
-/* =================== MENU DE NAVEGAÇÃO =================== */
 nav ul {
-  list-style: none; /* Remove os pontinhos da lista */
-  display: flex; /* Coloca os itens lado a lado */
-  justify-content: center; /* Centraliza os itens */
-  gap: 20px; /* Espaço entre os links */
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Coloca os links lado a lado */
+  justify-content: center; /* Centraliza */
+  gap: 20px; /* Espaço entre links */
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none; /* Remove o sublinhado */
-  font-weight: bold; /* Deixa em negrito */
+  color: #fff; /* Links brancos */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Negrito */
 }
 
 nav a:hover {
-  text-decoration: underline; /* Sublinha ao passar o mouse */
+  text-decoration: underline; /* Sublinha quando passa o mouse */
 }
 
-/* =================== CONTEÚDO PRINCIPAL =================== */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
-  padding: 20px;
-  max-width: 900px; /* Largura máxima */
+  max-width: 1200px; /* Largura máxima */
   margin: auto; /* Centraliza no meio da tela */
 }
 
-/* Cada seção fica com caixa branca e sombra */
-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Estilo geral das seções */
+.secao {
+  padding: 40px 20px; /* Espaçamento interno */
+  min-height: 70vh; /* Ocupa boa parte da tela */
 }
 
-/* Títulos das seções */
-section h2 {
-  margin-bottom: 15px;
-  color: #1e3a8a; /* Azul igual ao header */
+/* Cada seção tem cor diferente para destacar */
+.secao-curso {
+  background: #fef9c3; /* Amarelo claro */
 }
 
-/* Artigos dentro da seção de IA */
+.secao-ia {
+  background: #dbeafe; /* Azul claro */
+}
+
+.secao-setec {
+  background: #dcfce7; /* Verde claro */
+}
+
+.secao h2 {
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-size: 2rem; /* Tamanho maior */
+  color: #1e3a8a; /* Azul */
+}
+
 article {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Espaço entre artigos */
 }
 
-/* Imagens */
+/* ===== IMAGENS ===== */
 .imagem {
-  max-width: 100%; /* Para não estourar o tamanho da tela */
-  margin-top: 10px;
-  border-radius: 8px;
+  max-width: 100%; /* Não ultrapassa a tela */
+  margin-top: 15px; /* Espaço acima */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
 }
 
-/* =================== RODAPÉ =================== */
+/* ===== VÍDEOS LADO A LADO ===== */
+.videos-container {
+  display: flex; /* Deixa os vídeos em linha */
+  justify-content: space-between; /* Espaço igual */
+  flex-wrap: wrap; /* Quebra para baixo se faltar espaço */
+  gap: 15px; /* Espaço entre vídeos */
+  margin-top: 20px;
+}
+
+.videos-container iframe {
+  flex: 1; /* Ocupa espaço igual */
+  min-width: 200px; /* Largura mínima */
+  height: 200px; /* Altura fixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* ===== RODAPÉ ===== */
 footer {
-  text-align: center;
-  padding: 15px;
-  background: #1e3a8a;
-  color: #fff;
-  margin-top: 40px;
-  border-radius: 10px 10px 0 0; /* Arredonda só em cima */
+  text-align: center; /* Texto centralizado */
+  padding: 15px; /* Espaçamento */
+  background: #1e3a8a; /* Azul escuro */
+  color: #fff; /* Texto branco */
 }
