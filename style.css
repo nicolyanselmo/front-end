@@ -1,1 +1,120 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  box-sizing: border-box; /* Inclui borda no cálculo de tamanho */
+  font-family: Arial, sans-serif; /* Fonte padrão do site */
+}
 
+/* ===== BODY ===== */
+body {
+  line-height: 1.6; /* Espaçamento entre linhas do texto */
+  background-color: #f3f4f6; /* Cor de fundo geral (cinza claro) */
+  color: #333; /* Cor do texto */
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  background: #1e3a8a; /* Fundo azul escuro */
+  color: #fff; /* Texto branco */
+  padding: 20px 0; /* Espaço interno (cima e baixo) */
+  text-align: center; /* Centraliza texto */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra embaixo */
+}
+
+header h1 {
+  margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* ===== MENU ===== */
+nav ul {
+  list-style: none; /* Remove bolinhas da lista */
+  display: flex; /* Coloca os itens lado a lado */
+  justify-content: center; /* Centraliza no meio */
+  gap: 25px; /* Espaço entre os itens */
+  flex-wrap: wrap; /* Quebra para baixo se a tela for pequena */
+}
+
+nav a {
+  color: #fff; /* Cor branca dos links */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Deixa em negrito */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Aparece sublinhado ao passar o mouse */
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+  width: 100%; /* Ocupa toda a largura da tela */
+  padding: 30px; /* Espaçamento interno */
+}
+
+/* ===== SEÇÕES ===== */
+.secao {
+  padding: 40px 30px; /* Espaçamento interno */
+  margin: 25px auto; /* Espaço externo em cima e embaixo */
+  border-radius: 16px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra suave */
+}
+
+/* Cores diferentes para separar as seções */
+.secao-curso {
+  background: #fef9c3; /* Amarelo claro */
+}
+
+.secao-ia {
+  background: #dbeafe; /* Azul claro */
+}
+
+.secao-setec {
+  background: #dcfce7; /* Verde claro */
+}
+
+/* Títulos das seções */
+.secao h2 {
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-size: 2rem; /* Tamanho grande */
+  color: #1e3a8a; /* Azul escuro */
+  text-align: center; /* Centralizado */
+}
+
+article {
+  margin-bottom: 20px; /* Espaço entre os textos de cada tema */
+}
+
+/* ===== IMAGENS ===== */
+.imagem {
+  display: block; /* Faz a imagem ficar sozinha em uma linha */
+  max-width: 90%; /* Não deixa passar da tela */
+  margin: 20px auto; /* Centraliza e dá espaço em cima e embaixo */
+  border-radius: 14px; /* Bordas arredondadas */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25); /* Sombra */
+}
+
+/* ===== VÍDEOS LADO A LADO ===== */
+.videos-container {
+  display: flex; /* Coloca os vídeos lado a lado */
+  justify-content: center; /* Centraliza os vídeos */
+  flex-wrap: wrap; /* Se não couber, quebra para baixo */
+  gap: 20px; /* Espaço entre os vídeos */
+  margin-top: 20px; /* Espaço acima dos vídeos */
+}
+
+.videos-container iframe {
+  flex: 1; /* Faz os vídeos ocuparem espaço igual */
+  min-width: 250px; /* Largura mínima para não ficarem muito pequenos */
+  height: 300px; /* Altura maior para PC */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center; /* Texto centralizado */
+  padding: 15px; /* Espaçamento interno */
+  background: #1e3a8a; /* Azul escuro */
+  color: #fff; /* Texto branco */
+  margin-top: 30px; /* Espaço acima do rodapé */
+}
