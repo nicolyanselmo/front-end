@@ -1,118 +1,124 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Front-End - DS</title>
-  <!-- Importa o arquivo CSS -->
-  <link rel="stylesheet" href="style.css">
+        <!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma do site como português -->
+<head> <!-- Cabeçalho com informações do site -->
+  <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta para celular -->
+  <title>Projeto Front-End - DS</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS -->
 </head>
-<body>
-  <!-- Cabeçalho com título e menu de navegação -->
-  <header>
-    <h1>Projeto Front-End - Desenvolvimento de Sistemas</h1>
-    <nav>
-      <ul>
-        <!-- Links para cada seção -->
-        <li><a href="#curso">Sobre o Curso de DS</a></li>
-        <li><a href="#ia">Inteligência Artificial</a></li>
-        <li><a href="#setec">SETEC</a></li>
+<body> <!-- Corpo do site (conteúdo visível) -->
+
+  <!-- =================== CABEÇALHO =================== -->
+  <header> <!-- Cabeçalho principal -->
+    <h1>Projeto Front-End - Desenvolvimento de Sistemas</h1> <!-- Título do site -->
+    <nav> <!-- Menu de navegação -->
+      <ul> <!-- Lista de links -->
+        <li><a href="#curso">Sobre o Curso</a></li> <!-- Link para a seção do curso -->
+        <li><a href="#ia">Inteligência Artificial</a></li> <!-- Link para a seção de IA -->
+        <li><a href="#setec">SETEC Futurista</a></li> <!-- Link para a seção da SETEC -->
       </ul>
     </nav>
   </header>
 
-  <!-- Conteúdo principal -->
-  <main>
+  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
+  <main> <!-- Área principal do site -->
 
-    <!-- SEÇÃO 1 -->
-    <section id="curso">
-      <h2>Sobre o Curso de DS</h2>
+    <!-- ========== SEÇÃO 1: CURSO DE DS ========== -->
+    <section id="curso" class="secao secao-curso"> <!-- Seção sobre o curso de DS -->
+      <h2>Sobre o Curso de DS</h2> <!-- Subtítulo da seção -->
       <p>
-        O curso de <strong>Desenvolvimento de Sistemas (DS)</strong> é voltado para formar profissionais
-        capazes de criar, analisar, projetar e implementar softwares e aplicações modernas.  
-        Os alunos aprendem desde a lógica de programação, banco de dados e desenvolvimento web
-        e inteligência artificial.
+        O curso de <strong>Desenvolvimento de Sistemas (DS)</strong> tem como objetivo formar profissionais
+        capazes de planejar, criar e manter softwares, aplicativos e sites modernos.  
+        Durante o curso, o aluno aprende desde a <em>lógica de programação</em> e a estruturação de bancos de dados
+        até linguagens de programação atuais, como <strong>Java, Python e JavaScript</strong>.  
+        Além disso, o curso prepara o estudante para trabalhar com tecnologias de ponta, como
+        <strong>Inteligência Artificial</strong> e <strong>Segurança da Informação</strong>, ampliando
+        suas oportunidades no mercado de trabalho.  
       </p>
-      <!-- Exemplo de imagem dentro da pasta /img -->
-      <img src="img/curso-ds.jpg" alt="Imagem representando o curso de DS" class="imagem">
-      <br>
-      
-      <iframe width="560" height="315" src="" 
-              title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <p>
+        O profissional formado em DS pode atuar em empresas de tecnologia, startups, indústrias,
+        instituições financeiras ou até mesmo abrir seu próprio negócio no setor de desenvolvimento.
+      </p>
+      <img src="img/curso-ds.jpg" alt="Imagem representando o curso de DS" class="imagem"> <!-- Imagem -->
+      <br> <!-- Quebra de linha -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NzBfzzr4d64"
+              title="Vídeo sobre Desenvolvimento de Sistemas" frameborder="0" allowfullscreen></iframe> <!-- Vídeo -->
     </section>
 
-    <!--SEÇÃO 2  -->
-    <section id="ia">
+    <!-- ========== SEÇÃO 2: INTELIGÊNCIA ARTIFICIAL ========== -->
+    <section id="ia" class="secao secao-ia"> <!-- Seção sobre IA -->
       <h2>Mundo da Inteligência Artificial</h2>
       <p>
-        A <strong>Inteligência Artificial (IA)</strong> é uma das áreas mais promissoras da tecnologia.
-        Abaixo estão quatro temas importantes dentro desse universo:
-      </p>
+        A <strong>Inteligência Artificial</strong> já está presente no nosso dia a dia.
+        Aqui estão quatro dos temas mais conhecidos:
+      </p> 
       
-      <!-- Tema 1 -->
-      <article>
-        <h3>1. Aprendizado de Máquina </h3>
+      <article> <!-- Tema 1 -->
+        <h3>1. Chatbots e Assistentes Virtuais</h3>
         <p>
-          É a área da IA que ensina computadores a aprender com dados, sem precisar
-          ser programados diretamente para cada tarefa. Exemplos: recomendação da Netflix,
-          filtros de spam no e-mail, reconhecimento de padrões em imagens.
+          São programas que conversam com pessoas usando linguagem natural.
+          Exemplos famosos: <strong>ChatGPT</strong>, Alexa, Google Assistente e Siri.
         </p>
       </article>
 
-      <!-- Tema 2 -->
-      <article>
-        <h3>2. Visão Computacional</h3>
+      <article> <!-- Tema 2 -->
+        <h3>2. Carros Autônomos</h3>
         <p>
-          Foca em fazer com que máquinas “enxerguem” e interpretem imagens e vídeos.
-          Exemplos: carros autônomos que identificam pedestres, sistemas de câmeras inteligentes
-          e reconhecimento facial em smartphones.
+          Veículos que dirigem sozinhos usando sensores, câmeras e algoritmos de IA.
+          Empresas como a Tesla e o Google estão na frente dessa inovação.
         </p>
       </article>
 
-      <!-- Tema 3 -->
-      <article>
-        <h3>3. Processamento de Linguagem Natural (PLN)</h3>
+      <article> <!-- Tema 3 -->
+        <h3>3. Reconhecimento Facial</h3>
         <p>
-          Área responsável por fazer a comunicação entre humanos e máquinas através da linguagem.
-          Exemplos: assistentes virtuais como Alexa e Google Assistente, tradutores automáticos
-          e até mesmo este chatbot que você está usando 😁.
+          Tecnologia que identifica pessoas pelo rosto.  
+          É usada em desbloqueio de celulares, segurança pública e até redes sociais.
         </p>
       </article>
 
-      <!-- Tema 4 -->
-      <article>
-        <h3>4. Robótica com IA</h3>
+      <article> <!-- Tema 4 -->
+        <h3>4. IA Generativa</h3>
         <p>
-          Une a robótica com inteligência artificial para criar robôs capazes de agir de forma autônoma,
-          aprendendo e se adaptando ao ambiente. Exemplos: robôs de resgate, robôs industriais e drones inteligentes.
+          Um dos avanços mais recentes da tecnologia, capaz de criar textos, imagens,
+          músicas e até vídeos. Exemplos: <strong>ChatGPT</strong> para texto
+          e <strong>MidJourney</strong> para imagens.
         </p>
       </article>
 
-      <!-- Exemplo de vídeo sobre IA -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/UhA_ZgI-otM?si=XVHlsojo9U5viV8K" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen></iframe>
-      <img src="https://img.youtube.com/vi/UhA_ZgI-otM&t=26s/maxresdefault.jpg"/>
+      <!-- Container com 4 vídeos lado a lado -->
+      <div class="videos-container">
+        <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="O que é IA?" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/sQ6iP7fK53I" title="Carros autônomos" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/v=AXpGg7Qg2dE" title="Reconhecimento facial" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/v=Te5rOTcE3qk" title="IA Generativa" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
 
-    <!-- SEÇÃO 3  -->
-    <section id="setec">
-      <h2>SETEC</h2>
+    <!-- ========== SEÇÃO 3: SETEC FUTURISTA ========== -->
+    <section id="setec" class="secao secao-setec"> <!-- Seção sobre a SETEC -->
+      <h2>SETEC Futurista</h2>
       <p>
-        A <strong>SETEC</strong> é um evento importante
-        que promove palestras, oficinas e apresentações de projetos nas áreas de ciência e tecnologia.  
-        Seu objetivo é integrar alunos, professores e a comunidade, incentivando a troca de conhecimento
-        e o desenvolvimento de novas ideias.
+        A <strong>SETEC (Semana de Educação, Tecnologia e Cultura)</strong> é um evento que une
+        palestras, oficinas, exposições e apresentações de projetos acadêmicos.  
+        Seu propósito é incentivar a <em>inovação, o empreendedorismo e a troca de conhecimento</em> 
+        entre alunos, professores e a comunidade em geral.
       </p>
       <p>
-        Em uma versão futurista, a SETEC pode incorporar tecnologias de <strong>Realidade Aumentada com IA</strong>,
-        permitindo que os participantes interajam com palestras virtuais, simulações 3D e ambientes
-        de aprendizagem imersivos. Assim, a experiência se tornaria ainda mais inovadora e acessível.
+        Em uma visão futurista, a SETEC poderia adotar tecnologias como <strong>Realidade Virtual</strong>
+        e <strong>Inteligência Artificial Generativa</strong>. Imagine participar de uma palestra
+        usando óculos de realidade aumentada, interagindo com ambientes 3D, ou até mesmo assistir
+        a uma apresentação criada em tempo real por uma IA.  
+        Isso tornaria o evento ainda mais <strong>imersivo, acessível e inovador</strong>.
       </p>
-      <img src="img/setec.jpg" alt="Imagem da SETEC" class="imagem">
+      <img src="img/setec.jpg" alt="Imagem futurista da SETEC" class="imagem"> <!-- Imagem -->
     </section>
 
   </main>
+
+  <!-- =================== RODAPÉ =================== -->
+  <footer>
+    <p>Desenvolvido por [Seu Nome] - 2025</p>
+  </footer>
 </body>
-    </html>
+          </html>
