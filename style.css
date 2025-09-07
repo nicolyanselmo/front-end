@@ -1,121 +1,129 @@
-/* ===== RESET ===== */
+/* ===== RESET BÁSICO ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  margin: 0; /* Remove margens padrão do navegador */
+  padding: 0; /* Remove espaçamentos padrão */
+  box-sizing: border-box; /* Inclui bordas no cálculo de largura/altura */
+  font-family: Arial, sans-serif; /* Define fonte padrão */
 }
 
-/* ===== FUNDO GERAL ===== */
+/* ===== CORPO DO SITE ===== */
 body {
-  background: #e9eff6; /* Azul bem clarinho */
-  color: #333;
-  line-height: 1.6;
-  padding: 0; /* Sem padding, vamos usar nas seções */
+  background: #f0f2f5; /* Fundo cinza claro */
+  color: #333; /* Texto em cinza escuro */
+  font-size: 18px; /* Texto maior e mais fácil de ler */
+  line-height: 1.7; /* Espaçamento entre linhas */
 }
 
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 1200px; /* Mais largo para ocupar melhor */
-  margin: auto; /* Centraliza */
-  padding: 40px; /* Espaço nas laterais */
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: auto; /* Centraliza na tela */
+  padding: 20px; /* Espaço em volta do conteúdo */
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-  text-align: center;
-  padding: 25px;
-  background: #2a4797; /* Azul escuro */
-  color: white;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  background: #2a4797; /* Fundo azul escuro */
+  color: white; /* Texto branco */
+  padding: 30px; /* Espaçamento interno */
+  text-align: center; /* Centraliza texto */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 40px; /* Espaço abaixo */
 }
 
 header h1 {
-  margin-bottom: 10px;
+  font-size: 2.2rem; /* Título maior */
+  margin-bottom: 15px; /* Espaço abaixo */
 }
 
+/* ===== MENU DE NAVEGAÇÃO ===== */
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  list-style: none; /* Remove bolinhas da lista */
+  display: flex; /* Coloca os links lado a lado */
+  justify-content: center; /* Centraliza os links */
+  gap: 30px; /* Espaço entre os links */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Remove sublinhado */
+  color: white; /* Cor branca */
+  font-weight: bold; /* Deixa em negrito */
+  font-size: 1.1rem; /* Texto maior */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 
 /* ===== SEÇÕES ===== */
 .secao {
-  margin: 40px 0; /* Espaço entre seções */
-  padding: 40px 60px; /* Espaço interno maior (laterais largas) */
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 40px 0; /* Espaço fora da seção */
+  padding: 40px 50px; /* Espaço dentro da seção */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra leve */
 }
 
-/* ===== CADA SEÇÃO COM COR DE FUNDO DIFERENTE ===== */
+/* Cores diferentes para cada seção */
 .secao-curso {
-  background: #fef9c3; /* Amarelo claro */
+  background: #fff3cd; /* Amarelo clarinho */
 }
 
 .secao-ia {
-  background: #dbeafe; /* Azul claro */
+  background: #dbeafe; /* Azul clarinho */
 }
 
 .secao-setec {
-  background: #dcfce7; /* Verde claro */
+  background: #dcfce7; /* Verde clarinho */
 }
 
 /* ===== TÍTULOS ===== */
 .secao h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2a4797;
+  text-align: center; /* Centraliza */
+  margin-bottom: 25px; /* Espaço abaixo */
+  font-size: 2rem; /* Título maior */
+  color: #2a4797; /* Azul escuro */
+}
+
+/* ===== ARTIGOS ===== */
+article {
+  margin-bottom: 20px; /* Espaço abaixo de cada tema */
 }
 
 /* ===== IMAGENS ===== */
 .imagem {
-  display: block;
-  max-width: 100%;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: block; /* Faz a imagem ocupar linha toda */
+  max-width: 100%; /* Não passa do tamanho da tela */
+  margin: 25px auto; /* Centraliza e dá espaço */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Sombra */
 }
 
 /* ===== VÍDEOS ===== */
 .categoria-videos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+  display: flex; /* Coloca vídeos lado a lado */
+  justify-content: center; /* Centraliza */
+  flex-wrap: wrap; /* Quebra linha se não couber */
+  gap: 20px; /* Espaço entre eles */
+  margin-top: 25px; /* Espaço acima */
 }
 
 .categoria-videos img {
-  width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  width: 260px; /* Largura das miniaturas */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
+  transition: transform 0.3s; /* Animação suave */
 }
 
 .categoria-videos img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Dá zoom ao passar o mouse */
 }
 
 /* ===== RODAPÉ ===== */
 footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  color: #fff;
-  background: #2a4797;
-  border-radius: 10px;
-}
+  text-align: center; /* Centraliza texto */
+  padding: 20px; /* Espaçamento interno */
+  margin-top: 40px; /* Espaço acima */
+  background: #2a4797; /* Azul escuro */
+  color: white; /* Texto branco */
+  border-radius: 10px; /* Bordas arredondadas */
+  }
