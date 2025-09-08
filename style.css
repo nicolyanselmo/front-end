@@ -1,4 +1,4 @@
-/* ===== RESET BÁSICO ===== */
+/*RESET BÁSICO*/
 * {
   margin: 0; /* Remove margens padrão */
   padding: 0; /* Remove espaçamentos padrão */
@@ -6,7 +6,7 @@
   font-family: Arial, sans-serif; /* Define fonte padrão */
 }
 
-/* ===== CORPO DO SITE ===== */
+/*CORPO DO SITE */
 body {
   background: #f4f6f9; /* Fundo cinza bem claro */
   color: #333; /* Texto escuro */
@@ -15,13 +15,13 @@ body {
   padding: 0 15px; /* Espaço nas laterais */
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
+/*CONTAINER PRINCIPAL */
 .container {
   max-width: 90%; /* Largura máxima */
   margin: auto; /* Centraliza na tela */
 }
 
-/* ===== CABEÇALHO ===== */
+/*CABEÇALHO*/
 header {
   background: #1e3a8a; /* Azul escuro */
   color: white; /* Texto branco */
@@ -56,7 +56,7 @@ nav a:hover {
   text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 
-/* ===== SEÇÕES ===== */
+/*SEÇÕES*/
 .secao {
   margin: 40px 0; /* Espaço entre as seções */
   padding: 50px; /* Espaço interno */
@@ -77,7 +77,7 @@ nav a:hover {
   background: #e7fbe7; /* Verde claro */
 }
 
-/* ===== TÍTULOS ===== */
+/*TÍTULOS*/
 .secao h2 {
   text-align: center; /* Centraliza */
   font-size: 2.2rem; /* Título grande */
@@ -85,13 +85,13 @@ nav a:hover {
   color: #1e3a8a; /* Azul escuro */
 }
 
-/* ===== TEXTOS ===== */
+/* TEXTOS*/
 .secao p {
   margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
   font-size: 1.2rem; /* Texto maior */
 }
 
-/* ===== ARTIGOS (temas IA) ===== */
+/*temas IA */
 article {
   margin-bottom: 25px; /* Espaço entre os artigos */
 }
@@ -102,7 +102,7 @@ article h3 {
   font-size: 1.4rem; /* Título maior */
 }
 
-/* ===== IMAGENS ===== */
+/* IMAGENS */
 .imagem {
   display: block; /* Faz a imagem ocupar a linha toda */
   max-width: 95%; /* Não ultrapassa a tela */
@@ -111,7 +111,7 @@ article h3 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Sombra */
 }
 
-/* ===== VÍDEOS ===== */
+/* VÍDEOS */
 .videos {
   display: flex; /* Coloca vídeos lado a lado */
   justify-content: center; /* Centraliza */
@@ -129,7 +129,7 @@ article h3 {
   box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Sombra */
 }
 
-/* ===== RODAPÉ ===== */
+/*RODAPÉ*/
 footer {
   background: #1e3a8a; /* Azul escuro */
   color: white; /* Texto branco */
@@ -139,3 +139,11 @@ footer {
   border-radius: 12px; /* Bordas arredondadas */
   font-size: 1.1rem; /* Texto um pouco maior */
   }
+ 
+/* Estilo para a imagem dentro do footer */
+    footer img {
+      width: 55px; /* Define a largura da imagem */
+      height: auto; /* Mantém a proporção da imagem */
+      display: block; /* Garante que a imagem seja um bloco, para melhor controle */
+      margin: 0 auto; /* Centraliza a imagem se ela for um bloco */
+    }
