@@ -140,10 +140,3 @@ footer {
   font-size: 1.1rem; /* Texto um pouco maior */
   }
  
-/* Estilo para a imagem dentro do footer */
-    footer img {
-      width: 50%; /* Define a largura da imagem */
-      height: auto; /* Mantém a proporção da imagem */
-      display: block; /* Garante que a imagem seja um bloco, para melhor controle */
-      margin: 0 auto; /* Centraliza a imagem se ela for um bloco */
-    }
