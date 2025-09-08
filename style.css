@@ -17,7 +17,7 @@ body {
 
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 1200px; /* Largura máxima */
+  max-width: 90%; /* Largura máxima */
   margin: auto; /* Centraliza na tela */
 }
 
