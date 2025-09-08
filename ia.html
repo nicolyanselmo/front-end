@@ -4,54 +4,436 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inteligência Artificial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos semelhantes ao index.html, mas adaptados para uma página individual */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* ===== VARIÁVEIS DE CORES ===== */
+        :root {
+            --azul-escuro: #1e3a8a;
+            --azul-medio: #3b82f6;
+            --azul-claro: #e0f2fe;
+            --amarelo-claro: #fff8dc;
+            --verde-claro: #e7fbe7;
+            --branco: #ffffff;
+            --cinza-claro: #f4f6f9;
+            --cinza-escuro: #333333;
+            --sombra: rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== RESET BÁSICO ===== */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
+        /* ===== CORPO DO SITE ===== */
+        body {
+            background: linear-gradient(135deg, var(--cinza-claro) 0%, #e9ecf1 100%);
+            color: var(--cinza-escuro);
+            font-size: 18px;
+            line-height: 1.7;
+            padding: 0 10px; /* Reduzindo o padding lateral */
+        }
+
+        /* ===== CONTAINER PRINCIPAL ===== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 15px; /* Reduzindo o padding lateral */
         }
-        
+
+        /* ===== CABEÇALHO ===== */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2d4ea8 100%);
-            color: white;
-            padding: 30px;
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, #2d4ea8 100%);
+            color: var(--branco);
+            padding: 40px 20px; /* Ajustando o padding */
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== BOTÃO VOLTAR ===== */
         .btn-voltar {
             display: inline-block;
-            background: #1e3a8a;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background: var(--branco);
+            color: var(--azul-escuro);
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: bold;
             margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
-        /* Adicione o restante dos estilos conforme necessário */
+
+        .btn-voltar:hover {
+            background: var(--azul-medio);
+            color: var(--branco);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SEÇÕES ===== */
+        .secao {
+            margin: 40px 0;
+            padding: 40px; /* Reduzindo o padding */
+            border-radius: 15px;
+            box-shadow: 0 8px 25px var(--sombra);
+            background: linear-gradient(135deg, var(--azul-claro) 0%, #b3e6fd 100%); /* Azul para a seção de IA */
+        }
+
+        .secao h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--azul-escuro);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .secao h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+            border-radius: 2px;
+        }
+
+        .secao p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* ===== LAYOUT EM GRADE ===== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: var(--azul-escuro);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-left: 4px solid var(--azul-medio);
+            padding-left: 12px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '•';
+            color: var(--azul-medio);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== DESTAQUE ===== */
+        .destaque {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .destaque h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        /* ===== CAIXA DE INFORMAÇÃO ===== */
+        .info-box {
+            background: var(--azul-claro);
+            border-left: 5px solid var(--azul-escuro);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, #2d4ea8 100%);
+            color: var(--branco);
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding: 0 5px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            header {
+                padding: 30px 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .secao {
+                padding: 25px;
+            }
+            
+            .secao h2 {
+                font-size: 1.8rem;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- CABEÇALHO -->
         <header>
             <h1>Inteligência Artificial</h1>
+            <a href="index.html?returnTo=ia" class="btn-voltar">Voltar para a Página Principal</a>
         </header>
-        
-        <a href="index.html?returnTo=ia" class="btn-voltar">Voltar para a página principal</a>
-        
-        <!-- Conteúdo completo sobre IA aqui -->
-        
+
+        <!-- SEÇÃO: O QUE É IA -->
+        <section class="secao">
+            <h2>O que é Inteligência Artificial?</h2>
+            <p>A <strong>Inteligência Artificial (IA)</strong> é um campo da ciência da computação dedicado à criação de sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. Esses sistemas podem aprender, raciocinar, perceber, deliberar e decidir de maneira autônoma ou semi-autônoma.</p>
+            
+            <div class="info-box">
+                <p>A IA não se limita a reproduzir a inteligência humana, mas também a superá-la em tarefas específicas, processando grandes volumes de dados de forma muito mais rápida e precisa do que um ser humano poderia.</p>
+            </div>
+            
+            <p>Desde sua concepção na década de 1950, a IA evoluiu de simples sistemas baseados em regras para complexas redes neurais capazes de aprendizado profundo (deep learning), revolucionando setores como saúde, finanças, transporte e entretenimento.</p>
+        </section>
+
+        <!-- SEÇÃO: TIPOS DE IA -->
+        <section class="secao">
+            <h2>Tipos de Inteligência Artificial</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>IA de Estreita (ANI)</h3>
+                    <ul>
+                        <li>Projetada para uma tarefa específica</li>
+                        <li>Capacidades limitadas a um domínio</li>
+                        <li>Exemplos: Assistentes virtuais, sistemas de recomendação</li>
+                        <li>É a forma de IA mais comum atualmente</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>IA Geral (AGI)</h3>
+                    <ul>
+                        <li>Capacidade de entender, aprender e aplicar conhecimento</li>
+                        <li>Pode realizar qualquer tarefa intelectual humana</li>
+                        <li>Ainda em desenvolvimento teórico</li>
+                        <li>Desafio científico complexo</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Superinteligência (ASI)</h3>
+                    <ul>
+                        <li>Inteligência que supera a humana</li>
+                        <li>Capacidade de autoaperfeiçoamento</li>
+                        <li>Conceito ainda hipotético</li>
+                        <li>Objeto de discussões éticas e filosóficas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: TECNOLOGIAS DE IA -->
+        <section class="secao">
+            <h2>Tecnologias e Técnicas de IA</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>Algoritmos que aprendem com dados</li>
+                        <li>Aprendizado supervisionado e não supervisionado</li>
+                        <li>Redes neurais artificiais</li>
+                        <li>Aplicações em reconhecimento de padrões</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Deep Learning</h3>
+                    <ul>
+                        <li>Redes neurais com múltiplas camadas</li>
+                        <li>Reconhecimento de imagem e fala</li>
+                        <li>Processamento de linguagem natural</li>
+                        <li>Requer grandes volumes de dados</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <ul>
+                        <li>Análise e geração de linguagem humana</li>
+                        <li>Chatbots e assistentes virtuais</li>
+                        <li>Tradução automática</li>
+                        <li>Análise de sentimentos</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Visão Computacional</h3>
+                    <ul>
+                        <li>Interpretação de imagens e vídeos</li>
+                        <li>Reconhecimento facial</li>
+                        <li>Detecção de objetos</li>
+                        <li>Veículos autônomos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: APLICAÇÕES DA IA -->
+        <section class="secao">
+            <h2>Aplicações da Inteligência Artificial</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Saúde</h3>
+                    <ul>
+                        <li>Diagnóstico médico assistido</li>
+                        <li>Análise de imagens médicas</li>
+                        <li>Descoberta de novos medicamentos</li>
+                        <li>Monitoramento de pacientes</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Finanças</h3>
+                    <ul>
+                        <li>Detecção de fraudes</li>
+                        <li>Análise de risco de crédito</li>
+                        <li>Investimentos algorítmicos</li>
+                        <li>Atendimento ao cliente automatizado</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Transporte</h3>
+                    <ul>
+                        <li>Veículos autônomos</li>
+                        <li>Otimização de rotas</li>
+                        <li>Gestão de tráfego</li>
+                        <li>Previsão de demanda</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Varejo</h3>
+                    <ul>
+                        <li>Sistemas de recomendação</li>
+                        <li>Gestão de estoque</li>
+                        <li>Previsão de tendências</li>
+                        <li>Experiência personalizada</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="destaque">
+                <h3>Impacto da IA</h3>
+                <p>Estima-se que até 2030, a IA possa contribuir com até US$ 15,7 trilhões para a economia global, sendo US$ 6,6 trilhões provenientes do aumento de produtividade e US$ 9,1 trilhões de efeitos no consumo.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: FUTURO DA IA -->
+        <section class="secao">
+            <h2>O Futuro da Inteligência Artificial</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Tendências Emergentes</h3>
+                    <ul>
+                        <li>IA explicável (XAI)</li>
+                        <li>IA generativa e criativa</li>
+                        <li>Edge AI (processamento local)</li>
+                        <li>IA para sustentabilidade</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Desafios Éticos</h3>
+                    <ul>
+                        <li>Privacidade e vigilância</li>
+                        <li>Vieses algorítmicos</li>
+                        <li>Responsabilidade por decisões</li>
+                        <li>Impacto no emprego</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Oportunidades</h3>
+                    <ul>
+                        <li>Personalização em escala</li>
+                        <li>Automação de tarefas complexas</li>
+                        <li>Novas formas de criatividade</li>
+                        <li>Soluções para problemas globais</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <p>O desenvolvimento responsável de IA requer colaboração entre tecnólogos, legisladores, ethicistas e a sociedade em geral para garantir que os benefícios sejam maximizados e os riscos mitigados.</p>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <p>Inteligência Artificial &copy; 2023 - Todos os direitos reservados</p>
+        </footer>
     </div>
 </body>
 </html>
