@@ -1,54 +1,55 @@
 /* ===== RESET BÁSICO ===== */
 * {
-  margin: 0; /* Remove margens padrão do navegador */
+  margin: 0; /* Remove margens padrão */
   padding: 0; /* Remove espaçamentos padrão */
-  box-sizing: border-box; /* Inclui bordas no cálculo de largura/altura */
+  box-sizing: border-box; /* Inclui borda no cálculo de largura/altura */
   font-family: Arial, sans-serif; /* Define fonte padrão */
 }
 
 /* ===== CORPO DO SITE ===== */
 body {
-  background: #f0f2f5; /* Fundo cinza claro */
-  color: #333; /* Texto em cinza escuro */
-  font-size: 18px; /* Texto maior e mais fácil de ler */
-  line-height: 1.7; /* Espaçamento entre linhas */
+  background: #f4f6f9; /* Fundo cinza bem claro */
+  color: #333; /* Texto escuro */
+  font-size: 20px; /* Texto maior e mais fácil de ler */
+  line-height: 1.8; /* Espaçamento entre linhas */
+  padding: 0 15px; /* Espaço nas laterais */
 }
 
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 1200px; /* Largura máxima do conteúdo */
+  max-width: 1200px; /* Largura máxima */
   margin: auto; /* Centraliza na tela */
-  padding: 20px; /* Espaço em volta do conteúdo */
 }
 
 /* ===== CABEÇALHO ===== */
 header {
-  background: #2a4797; /* Fundo azul escuro */
+  background: #1e3a8a; /* Azul escuro */
   color: white; /* Texto branco */
-  padding: 30px; /* Espaçamento interno */
+  padding: 40px 20px; /* Espaço interno */
   text-align: center; /* Centraliza texto */
-  border-radius: 10px; /* Bordas arredondadas */
-  margin-bottom: 40px; /* Espaço abaixo */
+  border-radius: 12px; /* Bordas arredondadas */
+  margin: 30px 0; /* Espaço acima e abaixo */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Sombra */
 }
 
 header h1 {
-  font-size: 2.2rem; /* Título maior */
+  font-size: 2.5rem; /* Título maior */
   margin-bottom: 15px; /* Espaço abaixo */
 }
 
-/* ===== MENU DE NAVEGAÇÃO ===== */
 nav ul {
-  list-style: none; /* Remove bolinhas da lista */
-  display: flex; /* Coloca os links lado a lado */
-  justify-content: center; /* Centraliza os links */
-  gap: 30px; /* Espaço entre os links */
+  list-style: none; /* Remove bolinhas */
+  display: flex; /* Coloca links lado a lado */
+  justify-content: center; /* Centraliza links */
+  gap: 40px; /* Espaço entre os links */
+  flex-wrap: wrap; /* Quebra linha se faltar espaço */
 }
 
 nav a {
+  color: white; /* Links brancos */
   text-decoration: none; /* Remove sublinhado */
-  color: white; /* Cor branca */
-  font-weight: bold; /* Deixa em negrito */
-  font-size: 1.1rem; /* Texto maior */
+  font-weight: bold; /* Negrito */
+  font-size: 1.2rem; /* Tamanho maior */
 }
 
 nav a:hover {
@@ -57,73 +58,84 @@ nav a:hover {
 
 /* ===== SEÇÕES ===== */
 .secao {
-  margin: 40px 0; /* Espaço fora da seção */
-  padding: 40px 50px; /* Espaço dentro da seção */
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra leve */
+  margin: 40px 0; /* Espaço entre as seções */
+  padding: 50px; /* Espaço interno */
+  border-radius: 14px; /* Bordas arredondadas */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15); /* Sombra suave */
 }
 
-/* Cores diferentes para cada seção */
+/* Cores de fundo para cada seção */
 .secao-curso {
-  background: #fff3cd; /* Amarelo clarinho */
+  background: #fff8dc; /* Amarelo bem claro */
 }
 
 .secao-ia {
-  background: #dbeafe; /* Azul clarinho */
+  background: #e0f2fe; /* Azul bem claro */
 }
 
 .secao-setec {
-  background: #dcfce7; /* Verde clarinho */
+  background: #e7fbe7; /* Verde claro */
 }
 
 /* ===== TÍTULOS ===== */
 .secao h2 {
   text-align: center; /* Centraliza */
-  margin-bottom: 25px; /* Espaço abaixo */
-  font-size: 2rem; /* Título maior */
-  color: #2a4797; /* Azul escuro */
+  font-size: 2.2rem; /* Título grande */
+  margin-bottom: 30px; /* Espaço abaixo */
+  color: #1e3a8a; /* Azul escuro */
 }
 
-/* ===== ARTIGOS ===== */
+/* ===== TEXTOS ===== */
+.secao p {
+  margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+  font-size: 1.2rem; /* Texto maior */
+}
+
+/* ===== ARTIGOS (temas IA) ===== */
 article {
-  margin-bottom: 20px; /* Espaço abaixo de cada tema */
+  margin-bottom: 25px; /* Espaço entre os artigos */
+}
+
+article h3 {
+  color: #1e3a8a; /* Azul escuro */
+  margin-bottom: 8px; /* Espaço abaixo do título */
+  font-size: 1.4rem; /* Título maior */
 }
 
 /* ===== IMAGENS ===== */
 .imagem {
-  display: block; /* Faz a imagem ocupar linha toda */
-  max-width: 100%; /* Não passa do tamanho da tela */
-  margin: 25px auto; /* Centraliza e dá espaço */
+  display: block; /* Faz a imagem ocupar a linha toda */
+  max-width: 95%; /* Não ultrapassa a tela */
+  margin: 30px auto; /* Centraliza e dá espaço */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Sombra */
+}
+
+/* ===== VÍDEOS ===== */
+.videos {
+  display: flex; /* Coloca vídeos lado a lado */
+  justify-content: center; /* Centraliza */
+  flex-wrap: wrap; /* Quebra linha se não couber */
+  gap: 25px; /* Espaço entre vídeos */
+  margin-top: 30px; /* Espaço acima */
+}
+
+.videos iframe {
+  flex: 1; /* Ocupa espaço igual */
+  min-width: 260px; /* Largura mínima */
+  max-width: 400px; /* Largura máxima */
+  height: 250px; /* Altura */
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Sombra */
 }
 
-/* ===== VÍDEOS ===== */
-.categoria-videos {
-  display: flex; /* Coloca vídeos lado a lado */
-  justify-content: center; /* Centraliza */
-  flex-wrap: wrap; /* Quebra linha se não couber */
-  gap: 20px; /* Espaço entre eles */
-  margin-top: 25px; /* Espaço acima */
-}
-
-.categoria-videos img {
-  width: 260px; /* Largura das miniaturas */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra */
-  transition: transform 0.3s; /* Animação suave */
-}
-
-.categoria-videos img:hover {
-  transform: scale(1.05); /* Dá zoom ao passar o mouse */
-}
-
 /* ===== RODAPÉ ===== */
 footer {
-  text-align: center; /* Centraliza texto */
-  padding: 20px; /* Espaçamento interno */
-  margin-top: 40px; /* Espaço acima */
-  background: #2a4797; /* Azul escuro */
+  background: #1e3a8a; /* Azul escuro */
   color: white; /* Texto branco */
-  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza */
+  padding: 25px; /* Espaço interno */
+  margin-top: 50px; /* Espaço acima */
+  border-radius: 12px; /* Bordas arredondadas */
+  font-size: 1.1rem; /* Texto um pouco maior */
   }
