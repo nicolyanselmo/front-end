@@ -17,7 +17,7 @@ body {
 
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 1200px; /* Largura máxima aumentada para telas maiores */
+  max-width: 90%; /* Largura máxima aumentada para telas maiores */
   margin: 0 auto; /* Centraliza o container */
   padding: 0 20px; /* Adiciona espaçamento interno */
 }
