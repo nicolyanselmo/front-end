@@ -4,54 +4,450 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SETEC - Semana de Tecnologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos semelhantes ao index.html, mas adaptados para uma página individual */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* ===== VARIÁVEIS DE CORES ===== */
+        :root {
+            --azul-escuro: #1e3a8a;
+            --azul-medio: #3b82f6;
+            --azul-claro: #e0f2fe;
+            --amarelo-claro: #fff8dc;
+            --verde-claro: #e7fbe7;
+            --verde-escuro: #2e7d32;
+            --branco: #ffffff;
+            --cinza-claro: #f4f6f9;
+            --cinza-escuro: #333333;
+            --sombra: rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== RESET BÁSICO ===== */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
+        /* ===== CORPO DO SITE ===== */
+        body {
+            background: linear-gradient(135deg, var(--cinza-claro) 0%, #e9ecf1 100%);
+            color: var(--cinza-escuro);
+            font-size: 18px;
+            line-height: 1.7;
+            padding: 0 10px;
+        }
+
+        /* ===== CONTAINER PRINCIPAL ===== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 15px;
         }
-        
+
+        /* ===== CABEÇALHO ===== */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2d4ea8 100%);
-            color: white;
-            padding: 30px;
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%);
+            color: var(--branco);
+            padding: 40px 20px;
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== BOTÃO VOLTAR ===== */
         .btn-voltar {
             display: inline-block;
-            background: #1e3a8a;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background: var(--branco);
+            color: var(--verde-escuro);
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: bold;
             margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
-        /* Adicione o restante dos estilos conforme necessário */
+
+        .btn-voltar:hover {
+            background: var(--verde-escuro);
+            color: var(--branco);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SEÇÕES ===== */
+        .secao {
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px var(--sombra);
+            background: linear-gradient(135deg, var(--verde-claro) 0%, #c8e6c9 100%);
+        }
+
+        .secao h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--verde-escuro);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .secao h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--verde-escuro), #4caf50);
+            border-radius: 2px;
+        }
+
+        .secao p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* ===== LAYOUT EM GRADE ===== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        /* ===== CARDS ===== */
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: var(--verde-escuro);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-left: 4px solid #4caf50;
+            padding-left: 12px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '•';
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== DESTAQUE ===== */
+        .destaque {
+            background: var(--verde-escuro);
+            color: var(--branco);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .destaque h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        /* ===== CAIXA DE INFORMAÇÃO ===== */
+        .info-box {
+            background: var(--verde-claro);
+            border-left: 5px solid var(--verde-escuro);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--verde-escuro);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--branco);
+            border: 4px solid var(--verde-escuro);
+            border-radius: 50%;
+            top: 15px;
+            right: -13px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -13px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--branco);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content h4 {
+            color: var(--verde-escuro);
+            margin-bottom: 10px;
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%);
+            color: var(--branco);
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding: 0 5px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            header {
+                padding: 30px 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .secao {
+                padding: 25px;
+            }
+            
+            .secao h2 {
+                font-size: 1.8rem;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left, .right {
+                left: 0;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- CABEÇALHO -->
         <header>
             <h1>SETEC - Semana de Tecnologia</h1>
+            <a href="index.html?returnTo=setec" class="btn-voltar">Voltar para a Página Principal</a>
         </header>
-        
-        <a href="index.html?returnTo=setec" class="btn-voltar">Voltar para a página principal</a>
-        
-        <!-- Conteúdo completo sobre a SETEC aqui -->
-        
-    </div>
-</body>
-</html>
+
+        <!-- SEÇÃO: O QUE É A SETEC -->
+        <section class="secao">
+            <h2>O que é a SETEC?</h2>
+            <p>A <strong>SETEC (Semana de Tecnologia)</strong> é um evento acadêmico anual que reúne estudantes, professores, profissionais e entusiastas da área de tecnologia para compartilhar conhecimentos, experiências e inovações. É um espaço de aprendizado, networking e descoberta de novas tendências tecnológicas.</p>
+            
+            <div class="info-box">
+                <p>Com mais de uma década de tradição, a SETEC consolidou-se como um dos principais eventos de tecnologia da região, atraindo participantes de diversas instituições e empresas do setor.</p>
+            </div>
+            
+            <p>O evento promove a integração entre academia e mercado, proporcionando aos estudantes oportunidades de contato direto com profissionais atuantes e empresas líderes em tecnologia, além de estimular o desenvolvimento de projetos inovadores.</p>
+        </section>
+
+        <!-- SEÇÃO: OBJETIVOS -->
+        <section class="secao">
+            <h2>Objetivos da SETEC</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Educação e Aprendizado</h3>
+                    <ul>
+                        <li>Divulgar conhecimentos técnicos e científicos</li>
+                        <li>Atualizar participantes sobre tendências tecnológicas</li>
+                        <li>Promover a troca de experiências entre profissionais e estudantes</li>
+                        <li>Estimular a continuidade na formação profissional</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Networking e Oportunidades</h3>
+                    <ul>
+                        <li>Proporcionar contato com empresas do setor</li>
+                        <li>Facilitar oportunidades de estágio e emprego</li>
+                        <li>Criar redes de colaboração entre participantes</li>
+                        <li>Conectar estudantes com profissionais experientes</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Inovação e Empreendedorismo</h3>
+                    <ul>
+                        <li>Incentivar o desenvolvimento de projetos inovadores</li>
+                        <li>Promover a cultura empreendedora na área de tecnologia</li>
+                        <li>Apresentar cases de sucesso e soluções tecnológicas</li>
+                        <li>Estimular a criatividade e o pensamento disruptivo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: PROGRAMAÇÃO -->
+        <section class="secao">
+            <h2>Programação e Atividades</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Palestras</h3>
+                    <ul>
+                        <li>Especialistas renomados do mercado</li>
+                        <li>Temas atuais e relevantes para a área</li>
+                        <li>Cases de sucesso e inovações tecnológicas</li>
+                        <li>Tendências futuras do setor</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Workshops</h3>
+                    <ul>
+                        <li>Atividades práticas </li>
+                        <li>Aprendizado de novas tecnologias e ferramentas</li>
+                        <li>Desenvolvimento de habilidades técnicas</li>
+                        <li>Orientação por profissionais experientes</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Minicursos</h3>
+                    <ul>
+                        <li>Capacitação em tópicos específicos</li>
+                        <li>Conteúdo aprofundado sobre tecnologias emergentes</li>
+                        <li>Certificação de participação</li>
+                        <li>Oportunidade de desenvolvimento de skills</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Competições</h3>
+                    <ul>
+                        <li>Maratona de programação</li>
+                        <li>Desafio de robótica</li>
+                        <li>Hackathons temáticos</li>
+                        <li>Concurso de projetos inovadores</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="destaque">
+                <h3>Experiência Completa</h3>
+                <p>A SETEC oferece mais de 50 atividades distribuídas em 5 dias de evento, com a participação de mais de 100 palestrantes e a expectativa de receber mais de 2000 participantes em cada edição.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CRONOGRAMA -->
+        <section class="secao">
+            <h2>Cronograma da SETEC</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>1º Dia - Abertura</h4>
+                        <p>Cerimônia de abertura, palestra </p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2º Dia - Tecnologia & Inovação</h4>
+                        <p>Palestras sobre IA e tecnologias</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>3º Dia - Desenvolvimento</h4>
+                        <p>Workshops de programação, frameworks e metodologias ágeis</p>
+                    </div>
+                </div>
+              
+              
