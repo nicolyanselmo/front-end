@@ -1,274 +1,278 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Define que este é um documento HTML5 -->
+<html lang="pt-BR"> <!-- Define a linguagem principal do site como português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SETEC - Semana de Tecnologia</title>
+    <meta charset="UTF-8"> <!-- Define o padrão de caracteres como UTF-8 (suporta acentuação) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a página para ser responsiva em dispositivos móveis -->
+    <title>SETEC - Semana de Tecnologia</title> <!-- Título que aparece na aba do navegador -->
+    
+    <!-- Importa os ícones da biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS interno (estilos do site) -->
     <style>
         /* ===== VARIÁVEIS DE CORES ===== */
         :root {
-            --azul-escuro: #1e3a8a;
-            --azul-medio: #3b82f6;
-            --azul-claro: #e0f2fe;
-            --amarelo-claro: #fff8dc;
-            --verde-claro: #e7fbe7;
-            --verde-escuro: #2e7d32;
-            --branco: #ffffff;
-            --cinza-claro: #f4f6f9;
-            --cinza-escuro: #333333;
-            --sombra: rgba(0, 0, 0, 0.15);
+            --azul-escuro: #1e3a8a; /* Cor azul escura */
+            --azul-medio: #3b82f6; /* Cor azul média */
+            --azul-claro: #e0f2fe; /* Cor azul clara */
+            --amarelo-claro: #fff8dc; /* Cor amarelada clara */
+            --verde-claro: #e7fbe7; /* Verde claro para fundos */
+            --verde-escuro: #2e7d32; /* Verde escuro para destaques */
+            --branco: #ffffff; /* Branco */
+            --cinza-claro: #f4f6f9; /* Cinza claro */
+            --cinza-escuro: #333333; /* Cinza escuro para textos */
+            --sombra: rgba(0, 0, 0, 0.15); /* Cor de sombra */
         }
 
         /* ===== RESET BÁSICO ===== */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; /* Remove margens padrão */
+            padding: 0; /* Remove espaçamentos padrão */
+            box-sizing: border-box; /* Inclui borda e padding no cálculo de tamanho */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão */
         }
 
         /* ===== CORPO DO SITE ===== */
         body {
-            background: linear-gradient(135deg, var(--cinza-claro) 0%, #e9ecf1 100%);
-            color: var(--cinza-escuro);
-            font-size: 18px;
-            line-height: 1.7;
-            padding: 0 10px;
+            background: linear-gradient(135deg, var(--cinza-claro) 0%, #e9ecf1 100%); /* Fundo com degradê suave */
+            color: var(--cinza-escuro); /* Cor padrão do texto */
+            font-size: 18px; /* Tamanho padrão da fonte */
+            line-height: 1.7; /* Altura da linha para melhorar leitura */
+            padding: 0 10px; /* Espaçamento nas laterais */
         }
 
         /* ===== CONTAINER PRINCIPAL ===== */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+            max-width: 1200px; /* Largura máxima */
+            margin: 0 auto; /* Centraliza na tela */
+            padding: 0 15px; /* Espaço interno */
         }
 
         /* ===== CABEÇALHO ===== */
         header {
-            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%);
-            color: var(--branco);
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 12px;
-            margin: 30px 0;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%); /* Fundo com degradê verde */
+            color: var(--branco); /* Texto branco */
+            padding: 40px 20px; /* Espaçamento interno */
+            text-align: center; /* Centraliza o conteúdo */
+            border-radius: 12px; /* Cantos arredondados */
+            margin: 30px 0; /* Espaço acima e abaixo */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra */
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2.5rem; /* Tamanho grande do título */
+            margin-bottom: 20px; /* Espaço abaixo */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto */
         }
 
         /* ===== BOTÃO VOLTAR ===== */
         .btn-voltar {
-            display: inline-block;
-            background: var(--branco);
-            color: var(--verde-escuro);
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block; /* Faz o botão se comportar como bloco em linha */
+            background: var(--branco); /* Fundo branco */
+            color: var(--verde-escuro); /* Texto verde */
+            padding: 12px 25px; /* Espaçamento interno */
+            border-radius: 8px; /* Cantos arredondados */
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: bold; /* Deixa o texto em negrito */
+            margin: 20px 0; /* Espaço acima e abaixo */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
         }
 
         .btn-voltar:hover {
-            background: var(--verde-escuro);
-            color: var(--branco);
-            transform: translateY(-3px);
+            background: var(--verde-escuro); /* Muda o fundo ao passar o mouse */
+            color: var(--branco); /* Muda a cor do texto */
+            transform: translateY(-3px); /* Sobe levemente */
         }
 
         /* ===== SEÇÕES ===== */
         .secao {
-            margin: 40px 0;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px var(--sombra);
-            background: linear-gradient(135deg, var(--verde-claro) 0%, #c8e6c9 100%);
+            margin: 40px 0; /* Espaçamento externo */
+            padding: 40px; /* Espaçamento interno */
+            border-radius: 15px; /* Cantos arredondados */
+            box-shadow: 0 8px 25px var(--sombra); /* Sombra */
+            background: linear-gradient(135deg, var(--verde-claro) 0%, #c8e6c9 100%); /* Fundo com degradê */
         }
 
         .secao h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            color: var(--verde-escuro);
-            position: relative;
-            padding-bottom: 15px;
+            text-align: center; /* Centraliza o título */
+            font-size: 2.2rem; /* Tamanho grande */
+            margin-bottom: 30px; /* Espaço abaixo */
+            color: var(--verde-escuro); /* Cor verde */
+            position: relative; /* Necessário para usar ::after */
+            padding-bottom: 15px; /* Espaço abaixo do texto */
         }
 
         .secao h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--verde-escuro), #4caf50);
-            border-radius: 2px;
+            content: ''; /* Cria um elemento visual */
+            position: absolute; /* Posicionamento */
+            bottom: 0; /* Fica na base do título */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta para o centro */
+            width: 100px; /* Largura da linha */
+            height: 4px; /* Espessura da linha */
+            background: linear-gradient(90deg, var(--verde-escuro), #4caf50); /* Cor do destaque */
+            border-radius: 2px; /* Bordas arredondadas */
         }
 
         .secao p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            text-align: justify;
+            margin-bottom: 20px; /* Espaço abaixo */
+            font-size: 1.1rem; /* Texto um pouco maior */
+            text-align: justify; /* Justifica o texto */
         }
 
         /* ===== LAYOUT EM GRADE ===== */
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 35px 0;
+            display: grid; /* Define como grade */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta colunas automaticamente */
+            gap: 25px; /* Espaçamento entre os itens */
+            margin: 35px 0; /* Espaçamento externo */
         }
 
         /* ===== CARDS ===== */
         .card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+            padding: 25px; /* Espaçamento interno */
+            border-radius: 12px; /* Bordas arredondadas */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px); /* Sobe levemente ao passar o mouse */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
         }
 
         .card h3 {
-            color: var(--verde-escuro);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            border-left: 4px solid #4caf50;
-            padding-left: 12px;
+            color: var(--verde-escuro); /* Verde no título */
+            margin-bottom: 15px; /* Espaço abaixo */
+            font-size: 1.4rem; /* Tamanho do título */
+            border-left: 4px solid #4caf50; /* Linha de destaque à esquerda */
+            padding-left: 12px; /* Espaço após a linha */
         }
 
         .card ul {
-            list-style-type: none;
-            padding-left: 5px;
+            list-style-type: none; /* Remove bolinhas padrão */
+            padding-left: 5px; /* Ajusta alinhamento */
         }
 
         .card li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
+            margin-bottom: 10px; /* Espaço entre itens */
+            padding-left: 25px; /* Espaço para o marcador personalizado */
+            position: relative; /* Para posicionar o marcador */
         }
 
         .card li::before {
-            content: '•';
-            color: #4caf50;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+            content: '•'; /* Usa bolinha como marcador */
+            color: #4caf50; /* Verde */
+            font-weight: bold; /* Mais forte */
+            position: absolute; /* Posiciona manualmente */
+            left: 0; /* Fica antes do texto */
         }
 
         /* ===== DESTAQUE ===== */
         .destaque {
-            background: var(--verde-escuro);
-            color: var(--branco);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px 0;
-            text-align: center;
+            background: var(--verde-escuro); /* Fundo verde escuro */
+            color: var(--branco); /* Texto branco */
+            padding: 25px; /* Espaço interno */
+            border-radius: 12px; /* Bordas arredondadas */
+            margin: 30px 0; /* Espaçamento externo */
+            text-align: center; /* Centraliza o conteúdo */
         }
 
         .destaque h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem; /* Tamanho do título */
+            margin-bottom: 15px; /* Espaço abaixo */
         }
 
         /* ===== CAIXA DE INFORMAÇÃO ===== */
         .info-box {
-            background: var(--verde-claro);
-            border-left: 5px solid var(--verde-escuro);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
+            background: var(--verde-claro); /* Fundo verde claro */
+            border-left: 5px solid var(--verde-escuro); /* Linha lateral */
+            padding: 20px; /* Espaçamento interno */
+            margin: 25px 0; /* Espaço externo */
+            border-radius: 0 8px 8px 0; /* Bordas arredondadas apenas em alguns cantos */
         }
 
         /* ===== TIMELINE ===== */
         .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 40px auto;
+            position: relative; /* Para usar o ::after */
+            max-width: 1000px; /* Largura máxima */
+            margin: 40px auto; /* Centraliza */
         }
 
         .timeline::after {
-            content: '';
+            content: ''; /* Linha central da timeline */
             position: absolute;
             width: 6px;
             background-color: var(--verde-escuro);
             top: 0;
             bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+            left: 50%; /* Centraliza no meio */
+            margin-left: -3px; /* Ajusta a posição */
             border-radius: 3px;
         }
 
         .timeline-item {
-            padding: 10px 40px;
+            padding: 10px 40px; /* Espaçamento interno */
             position: relative;
-            width: 50%;
+            width: 50%; /* Cada item ocupa metade da tela */
             box-sizing: border-box;
         }
 
         .timeline-item::after {
-            content: '';
+            content: ''; /* Círculo marcador */
             position: absolute;
             width: 20px;
             height: 20px;
             background-color: var(--branco);
             border: 4px solid var(--verde-escuro);
-            border-radius: 50%;
+            border-radius: 50%; /* Torna redondo */
             top: 15px;
             right: -13px;
             z-index: 1;
         }
 
         .left {
-            left: 0;
+            left: 0; /* Itens à esquerda */
             text-align: right;
         }
 
         .right {
-            left: 50%;
+            left: 50%; /* Itens à direita */
         }
 
         .right::after {
-            left: -13px;
+            left: -13px; /* Ajusta posição do marcador */
         }
 
         .timeline-content {
-            padding: 20px;
-            background-color: var(--branco);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Espaço interno */
+            background-color: var(--branco); /* Fundo branco */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
         }
 
         .timeline-content h4 {
-            color: var(--verde-escuro);
-            margin-bottom: 10px;
+            color: var(--verde-escuro); /* Verde nos títulos */
+            margin-bottom: 10px; /* Espaço abaixo */
         }
 
         /* ===== RODAPÉ ===== */
         footer {
-            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%);
-            color: var(--branco);
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-            border-radius: 12px;
-            font-size: 1.1rem;
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, #4caf50 100%); /* Fundo degradê */
+            color: var(--branco); /* Texto branco */
+            text-align: center; /* Centraliza texto */
+            padding: 25px; /* Espaçamento interno */
+            margin-top: 50px; /* Espaçamento acima */
+            border-radius: 12px; /* Bordas arredondadas */
+            font-size: 1.1rem; /* Tamanho do texto */
         }
 
         /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 768px) {
             body {
-                font-size: 16px;
+                font-size: 16px; /* Texto menor em telas pequenas */
                 padding: 0 5px;
             }
             
@@ -293,54 +297,57 @@
             }
             
             .grid-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Empilha os cards em uma coluna */
             }
             
             .timeline::after {
-                left: 31px;
+                left: 31px; /* Ajusta linha da timeline */
             }
             
             .timeline-item {
-                width: 100%;
+                width: 100%; /* Ocupa toda largura */
                 padding-left: 70px;
                 padding-right: 25px;
             }
             
             .timeline-item::after {
-                left: 21px;
+                left: 21px; /* Reposiciona marcador */
             }
             
             .left, .right {
-                left: 0;
+                left: 0; /* Todos ficam alinhados à esquerda */
                 text-align: left;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!-- Container central que limita a largura -->
+
         <!-- CABEÇALHO -->
         <header>
-            <h1>SETEC - Semana de Tecnologia</h1>
-            <a href="index.html?returnTo=setec" class="btn-voltar">Voltar para a Página Principal</a>
+            <h1>SETEC - Semana de Tecnologia</h1> <!-- Título principal -->
+            <a href="index.html?returnTo=setec" class="btn-voltar">Voltar para a Página Principal</a> <!-- Botão de voltar -->
         </header>
 
         <!-- SEÇÃO: O QUE É A SETEC -->
         <section class="secao">
-            <h2>O que é a SETEC?</h2>
-            <p>A <strong>SETEC (Semana de Tecnologia)</strong> é um evento acadêmico anual que reúne estudantes, professores, profissionais e entusiastas da área de tecnologia para compartilhar conhecimentos, experiências e inovações. É um espaço de aprendizado, networking e descoberta de novas tendências tecnológicas.</p>
+            <h2>O que é a SETEC?</h2> <!-- Título da seção -->
+            <p>A <strong>SETEC (Semana de Tecnologia)</strong> é um evento acadêmico anual...</p> <!-- Texto explicativo -->
             
+            <!-- Caixa de destaque de informação -->
             <div class="info-box">
-                <p>Com mais de uma década de tradição, a SETEC consolidou-se como um dos principais eventos de tecnologia da região, atraindo participantes de diversas instituições e empresas do setor.</p>
+                <p>Com mais de uma década de tradição...</p>
             </div>
             
-            <p>O evento promove a integração entre academia e mercado, proporcionando aos estudantes oportunidades de contato direto com profissionais atuantes e empresas líderes em tecnologia, além de estimular o desenvolvimento de projetos inovadores.</p>
+            <p>O evento promove a integração entre academia e mercado...</p>
         </section>
 
         <!-- SEÇÃO: OBJETIVOS -->
         <section class="secao">
             <h2>Objetivos da SETEC</h2>
             
+            <!-- Container em grade para cards -->
             <div class="grid-container">
                 <div class="card">
                     <h3>Educação e Aprendizado</h3>
@@ -392,7 +399,7 @@
                 <div class="card">
                     <h3>Workshops</h3>
                     <ul>
-                        <li>Atividades práticas </li>
+                        <li>Atividades práticas</li>
                         <li>Aprendizado de novas tecnologias e ferramentas</li>
                         <li>Desenvolvimento de habilidades técnicas</li>
                         <li>Orientação por profissionais experientes</li>
@@ -420,6 +427,7 @@
                 </div>
             </div>
             
+            <!-- Caixa de destaque no final da seção -->
             <div class="destaque">
                 <h3>Experiência Completa</h3>
                 <p>A SETEC oferece mais de 50 atividades distribuídas em 5 dias de evento, com a participação de mais de 100 palestrantes e a expectativa de receber mais de 2000 participantes em cada edição.</p>
@@ -428,26 +436,40 @@
 
         <!-- SEÇÃO: CRONOGRAMA -->
         <section class="secao">
-            <h2>Cronograma da SETEC</h2>
+            <h2>Cronograma da SETEC</h2> <!-- Título da seção -->
             
+            <!-- Linha do tempo -->
             <div class="timeline">
+                <!-- Primeiro item da timeline, alinhado à esquerda -->
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <h4>1º Dia - Abertura</h4>
                         <p>Cerimônia de abertura, palestra </p>
                     </div>
                 </div>
+
+                <!-- Segundo item da timeline, alinhado à direita -->
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <h4>2º Dia - Tecnologia & Inovação</h4>
                         <p>Palestras sobre IA e tecnologias</p>
                     </div>
                 </div>
+
+                <!-- Terceiro item da timeline, alinhado à esquerda -->
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <h4>3º Dia - Desenvolvimento</h4>
                         <p>Workshops de programação, frameworks e metodologias ágeis</p>
                     </div>
                 </div>
-              
-              
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <p>2025 SETEC - Semana de Tecnologia.</p>
+        </footer>
+    </div> <!-- Fim do container -->
+</body>
+</html>
